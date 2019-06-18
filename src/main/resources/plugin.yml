@@ -1,0 +1,17 @@
+name: OreGenerator
+main: com.github.incognitojam.oregenerator.OreGenerator
+version: 1.0-SNAPSHOT
+description: Make ore gens more exciting
+author: IncognitoJam
+api-version: "1.14"
+
+commands:
+  oregenerator:
+    description: Manage OreGenerator config
+    usage: oregenerator reload
+    permission: oregenerator.manage
+
+permissions:
+  oregenerator.manage:
+    default: op
+    description: Allows the player to manage the OreGenerator config
