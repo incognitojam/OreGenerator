@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.google.code.gson:gson:2.8.5'
     compile 'org.spigotmc:spigot-api:1.14.1-R0.1-SNAPSHOT'
 }
 
