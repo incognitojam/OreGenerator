@@ -1,13 +1,53 @@
 {
-    "ores": {
-        "COBBLESTONE": 2000,
-        "STONE": 500,
-        "COAL_ORE": 150,
-        "IRON_ORE": 60,
-        "REDSTONE_ORE": 7,
-        "LAPIS_ORE": 7,
-        "GOLD_ORE": 6,
-        "DIAMOND_ORE": 1,
-        "EMERALD_ORE": 1
+    "generator": {
+        "enabled": true,
+        "oreChances": {
+            "COBBLESTONE": 2000,
+            "STONE": 500,
+            "COAL_ORE": 150,
+            "IRON_ORE": 60,
+            "REDSTONE_ORE": 7,
+            "LAPIS_ORE": 7,
+            "GOLD_ORE": 6,
+            "DIAMOND_ORE": 1,
+            "EMERALD_ORE": 1
+        },
+        "flint": {
+            "enabled": true,
+            "oreChances": {
+                "COBBLESTONE": 0.01
+            }
+        }
+    },
+    "grinder": {
+        "enabled": true,
+        "recipes": [
+            {
+                "input": {
+                    "material": "SANDSTONE",
+                    "quantity": 1
+                },
+                "output": {
+                    "material": "SAND",
+                    "quantity": {
+                        "min": 2,
+                        "max": 4
+                    }
+                }
+            },
+            {
+                "input": {
+                    "material": "COBBLESTONE",
+                    "quantity": 1
+                },
+                "output": {
+                    "material": "GRAVEL",
+                    "quantity": {
+                        "min": 0,
+                        "max": 1
+                    }
+                }
+            }
+        ]
     }
 }

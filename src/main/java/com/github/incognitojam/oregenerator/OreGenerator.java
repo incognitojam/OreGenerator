@@ -1,8 +1,14 @@
 package com.github.incognitojam.oregenerator;
 
 import net.md_5.bungee.api.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.inventory.FurnaceRecipe;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.Recipe;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
@@ -16,7 +22,20 @@ public class OreGenerator extends JavaPlugin {
 
         oreConfig = new OreConfig(seed);
         loadConfig();
-        getServer().getPluginManager().registerEvents(new OreListener(oreConfig), this);
+
+        PluginManager pluginManager = getServer().getPluginManager();
+        pluginManager.registerEvents(new OreListener(oreConfig), this);
+
+
+        final Recipe furnaceSandstone = new FurnaceRecipe(
+                new NamespacedKey(this, "furnace_sandstone"),
+                new ItemStack(Material.SANDSTONE),
+                Material.STONE,
+                0.0f,
+                150
+        );
+        getServer().addRecipe(furnaceSandstone);
+        pluginManager.registerEvents(new HopperListener(oreConfig), this);
     }
 
     @Override

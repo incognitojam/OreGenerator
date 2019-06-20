@@ -15,6 +15,8 @@ class OreConfig {
     private OreEntry[] oreEntries;
     private Integer totalOreEntryWeight;
 
+    private double flintChance;
+
     OreConfig(long seed) {
         gson = new Gson();
         random = new Random();
@@ -58,11 +60,18 @@ class OreConfig {
         this.oreEntries = oreEntries.toArray(new OreEntry[0]);
         this.totalOreEntryWeight = sum;
         this.initialised = true;
+
+        // Get flint chance from config, defaulting to "1 in 100" if not specified
+        this.flintChance = model.flintChance == null ? 0.01 : model.flintChance;
     }
 
     Material getNextOreMaterial() {
         if (!initialised) return null;
         return getNextOreEntry().material;
+    }
+
+    double getFlintChance() {
+        return flintChance;
     }
 
     private OreEntry getNextOreEntry() {
@@ -113,5 +122,6 @@ class OreConfig {
 
     static class Model {
         Map<String, Integer> ores;
+        Double flintChance;
     }
 }
