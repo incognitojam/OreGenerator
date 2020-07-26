@@ -27,7 +27,6 @@ class OreListener implements Listener {
         
         // Set our own material
         Material material = config.getNextOreMaterial();
-        System.out.println(material);
         block.setType(material);
     }
 }
