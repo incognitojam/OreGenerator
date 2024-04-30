@@ -1,7 +1,7 @@
 [versions]
 # Plugins
 kotlin = "2.0.0-RC1"
-shadow = "8.1.5"
+shadow = "8.1.7"
 paperweight = "1.5.15"
 run-paper = "2.2.4"
 
