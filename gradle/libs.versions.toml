@@ -1,8 +1,8 @@
 [versions]
 # Plugins
-kotlin = "2.0.0-RC1"
-shadow = "8.1.5"
-paperweight = "1.5.15"
+kotlin = "2.0.0-RC2"
+shadow = "8.1.7"
+paperweight = "1.6.3"
 run-paper = "2.2.4"
 
 # Libraries
