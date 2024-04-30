@@ -6,7 +6,7 @@ paperweight = "1.6.3"
 run-paper = "2.2.4"
 
 # Libraries
-twilight = "1.1.10"
+twilight = "2.0.0"
 paperlib = "1.0.8"
 bstats = "3.0.2"
 lamp = "3.2.1"
