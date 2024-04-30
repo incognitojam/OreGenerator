@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle("1.20.6-R0.1-SNAPSHOT")
 
     implementation(libs.twilight)
     implementation(libs.paperlib)
@@ -28,7 +28,7 @@ dependencies {
 
 tasks {
     build { dependsOn(shadowJar) }
-    runServer { minecraftVersion("1.20.4") }
+    runServer { minecraftVersion("1.20.6") }
 
     shadowJar {
         relocate("kotlin", "dev.incognitojam.kotlin")
@@ -39,9 +39,9 @@ tasks {
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
