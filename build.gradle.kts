@@ -38,6 +38,10 @@ tasks {
     }
 }
 
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+}
+
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(17)
 }
