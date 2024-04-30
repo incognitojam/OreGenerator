@@ -1,6 +1,6 @@
 [versions]
 # Plugins
-kotlin = "2.0.0-RC2"
+kotlin = "2.0.255-SNAPSHOT"
 shadow = "8.1.7"
 paperweight = "1.6.3"
 run-paper = "2.2.4"
