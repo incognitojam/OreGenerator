@@ -2,7 +2,7 @@
 # Plugins
 kotlin = "2.0.0-RC2"
 shadow = "8.1.7"
-paperweight = "1.6.3"
+paperweight = "1.7.1"
 run-paper = "2.2.4"
 
 # Libraries
